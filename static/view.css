@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+}
+
+.view{
+    display: grid;
+    justify-content:left;
+    align-items:start;
+    margin-left: 3em;
+}
+
+.view p{
+    font-size: large;
+}

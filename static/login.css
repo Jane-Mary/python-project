@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.form .one,.two {
+    margin-bottom: 2rem;
+}
+
+.form .one,.two, label {
+    margin-top: 5%;
+  
+}
+
+.form .one,.two, input {
+    width: 20em;
+    height: 2rem;
+}
+
+.form .button button {
+    cursor: pointer;
+    border-radius: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: #f7bcd9;
+}

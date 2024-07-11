@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+   background-color: whitesmoke;
+}
+
+table,th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 40em;
+    margin-top: 2em;
+}
+
+th, td {
+    background-color: white;
+  }
+
+
+.head {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.head form button{
+    cursor: pointer;
+    border-radius: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: #f7bcd9;
+}
+
+.head h1{
+    margin-left: 9em;
+}
+
+a#add{
+    padding-left: 55em;
+   
+}
+
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

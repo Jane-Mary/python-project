@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='task.css') }}">
+
+</head>
+
+<body>
+    
+    <div class="head">
+        <h1>Tasks Page</h1>
+        <form action="/auth/logout" method="post">
+            <button type="submit">Logout</button>
+        </form>
+    </div> 
+
+    
+    <a id="add" href="/add-task">Add Tasks</a>
+
+    <div class="task">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Leader</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                <tr>
+                    <td>{{ task.id }}</td>
+                  <td><a href="/view/{{ task.id }}">{{ task.title }}</a></td>
+                    <td>{{ task.description }}</td>
+                    <td>{{ task.leader }}</td>
+                    <td >
+                        <a href="/update/{{ task.id }}">Update |</a>
+                        <form action="/delete/{{ task.id }}" method="post">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button style="cursor: pointer;background-color:#f7bcd9; border-radius: 1.5em;">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+       
